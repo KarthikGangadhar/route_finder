@@ -1,0 +1,37 @@
+Informed Search selected
+
+Nodes Expanded: 0
+Fringe: 
+	Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}
+Closed: 
+	[]
+
+Expanding Node: 1
+Generating successors to Bremen
+Fringe: 
+	Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}
+	Hamburg: g(n) = 116.0, d = 1, f(n) = 316.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}
+	Dortmund: g(n) = 234.0, d = 1, f(n) = 334.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}
+Closed: 
+	['Bremen']
+
+Expanding Node: 2
+Generating successors to Hannover
+Fringe: 
+	Kassel: g(n) = 297.0, d = 2, f(n) = 297.0, Parent --> {Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}}
+	Hamburg: g(n) = 116.0, d = 1, f(n) = 316.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}
+	Dortmund: g(n) = 234.0, d = 1, f(n) = 334.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}
+	Magdeburg: g(n) = 280.0, d = 2, f(n) = 380.0, Parent --> {Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}}
+	Bremen: g(n) = 264.0, d = 2, f(n) = 464.0, Parent --> {Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, f(n) = 485.0, Parent --> {Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hannover']
+
+Expanding Node: 3
+Goal Found: Kassel: g(n) = 297.0, d = 2, f(n) = 297.0, Parent --> {Hannover: g(n) = 132.0, d = 1, f(n) = 232.0, Parent --> {Bremen: g(n) = 0, d = 0, f(n) = 200.0, Parent --> {None}}}. Generating Output
+
+nodes expanded: 3
+
+distance: 297.0 km
+Bremen to Hannover, 132.0 km
+Hannover to Kassel, 165.0 km

@@ -1,0 +1,67 @@
+Informed Search selected
+
+Nodes Expanded: 0
+Fringe: 
+	London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}
+Closed: 
+	[]
+
+Expanding Node: 1
+Generating successors to London
+Fringe: 
+	Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}
+Closed: 
+	['London']
+
+Expanding Node: 2
+Generating successors to Birmingham
+Fringe: 
+	London: g(n) = 234.0, d = 2, f(n) = 534.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+	Bristol: g(n) = 202.0, d = 2, f(n) = 602.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+	Manchester: g(n) = 201.0, d = 2, f(n) = 701.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+Closed: 
+	['London', 'Birmingham']
+
+Expanding Node: 3
+London is alread in closed. No successors
+Fringe: 
+	Bristol: g(n) = 202.0, d = 2, f(n) = 602.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+	Manchester: g(n) = 201.0, d = 2, f(n) = 701.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+Closed: 
+	['London', 'Birmingham']
+
+Expanding Node: 4
+Generating successors to Bristol
+Fringe: 
+	Birmingham: g(n) = 287.0, d = 3, f(n) = 687.0, Parent --> {Bristol: g(n) = 202.0, d = 2, f(n) = 602.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}}
+	Manchester: g(n) = 201.0, d = 2, f(n) = 701.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+Closed: 
+	['London', 'Birmingham', 'Bristol']
+
+Expanding Node: 5
+Birmingham is alread in closed. No successors
+Fringe: 
+	Manchester: g(n) = 201.0, d = 2, f(n) = 701.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}
+Closed: 
+	['London', 'Birmingham', 'Bristol']
+
+Expanding Node: 6
+Generating successors to Manchester
+Fringe: 
+	Birmingham: g(n) = 285.0, d = 3, f(n) = 685.0, Parent --> {Manchester: g(n) = 201.0, d = 2, f(n) = 701.0, Parent --> {Birmingham: g(n) = 117.0, d = 1, f(n) = 517.0, Parent --> {London: g(n) = 0, d = 0, f(n) = 300.0, Parent --> {None}}}}
+Closed: 
+	['London', 'Birmingham', 'Bristol', 'Manchester']
+
+Expanding Node: 7
+Birmingham is alread in closed. No successors
+Fringe: 
+Closed: 
+	['London', 'Birmingham', 'Bristol', 'Manchester']
+
+Fringe Empty. Goal Not Found. Generating Output
+
+nodes expanded: 7
+
+distance: infinity
+route:
+none

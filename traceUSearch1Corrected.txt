@@ -1,0 +1,174 @@
+Uninformed Search selected
+
+Nodes Expanded: 0
+Fringe: 
+	Bremen: g(n) = 0, d = 0, Parent --> {None}
+Closed: 
+	[]
+
+Expanding Node: 1
+Generating successors to Bremen
+Fringe: 
+	Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+Closed: 
+	['Bremen']
+
+Expanding Node: 2
+Generating successors to Hamburg
+Fringe: 
+	Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Luebeck: g(n) = 179.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 232.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg']
+
+Expanding Node: 3
+Generating successors to Hannover
+Fringe: 
+	Luebeck: g(n) = 179.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 232.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Bremen: g(n) = 264.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover']
+
+Expanding Node: 4
+Generating successors to Luebeck
+Fringe: 
+	Bremen: g(n) = 232.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Hamburg: g(n) = 242.0, d = 3, Parent --> {Luebeck: g(n) = 179.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Bremen: g(n) = 264.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck']
+
+Expanding Node: 5
+Bremen is alread in closed. No successors
+Fringe: 
+	Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}
+	Hamburg: g(n) = 242.0, d = 3, Parent --> {Luebeck: g(n) = 179.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Bremen: g(n) = 264.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck']
+
+Expanding Node: 6
+Generating successors to Dortmund
+Fringe: 
+	Hamburg: g(n) = 242.0, d = 3, Parent --> {Luebeck: g(n) = 179.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Bremen: g(n) = 264.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund']
+
+Expanding Node: 7
+Hamburg is alread in closed. No successors
+Fringe: 
+	Bremen: g(n) = 264.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund']
+
+Expanding Node: 8
+Bremen is alread in closed. No successors
+Fringe: 
+	Hannover: g(n) = 269.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund']
+
+Expanding Node: 9
+Hannover is alread in closed. No successors
+Fringe: 
+	Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund']
+
+Expanding Node: 10
+Generating successors to Magdeburg
+Fringe: 
+	Hamburg: g(n) = 285.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Leipzig: g(n) = 405.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 428.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Berlin: g(n) = 446.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund', 'Magdeburg']
+
+Expanding Node: 11
+Hamburg is alread in closed. No successors
+Fringe: 
+	Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Duesseldorf: g(n) = 303.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Leipzig: g(n) = 405.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Berlin: g(n) = 407.0, d = 2, Parent --> {Hamburg: g(n) = 116.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Hannover: g(n) = 428.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Berlin: g(n) = 446.0, d = 3, Parent --> {Magdeburg: g(n) = 280.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}}
+	Frankfurt: g(n) = 455.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Bremen: g(n) = 468.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+	Saarbruecken: g(n) = 584.0, d = 2, Parent --> {Dortmund: g(n) = 234.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}
+Closed: 
+	['Bremen', 'Hamburg', 'Hannover', 'Luebeck', 'Dortmund', 'Magdeburg']
+
+Expanding Node: 12
+Goal Found: Kassel: g(n) = 297.0, d = 2, Parent --> {Hannover: g(n) = 132.0, d = 1, Parent --> {Bremen: g(n) = 0, d = 0, Parent --> {None}}}. Generating Output
+
+nodes expanded: 12
+
+distance: 297.0 km
+Bremen to Hannover, 132.0 km
+Hannover to Kassel, 165.0 km
