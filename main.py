@@ -95,16 +95,16 @@ def generateNodes(model, neighbours, parent):
 
 def performSearch(model, start, goal):
   fringe = {}
-  openset = set()
+  opened = set()
   closed = set()
   fvalue = getFValue(model, start)
   expanded = 0
   fringe[start] = node(start,0,0, fvalue[1], 0,parent = None)
-  openset.add(fringe[start])
+  opened.add(fringe[start])
   current = start
 
-  while openset:
-    current = min(openset, key=lambda o:o.f)
+  while opened:
+    current = min(opened, key=lambda o:o.f)
     # print('Expanding Node %d'%(expanded))
     # print('Generating successors to %s'%(current.city))
     neighbours = getNeighbor(model, current)
@@ -118,7 +118,7 @@ def performSearch(model, start, goal):
       path.append(current)
       return (path[::-1],expanded)
 
-    openset.remove(current)
+    opened.remove(current)
     closed.add(current)
 
     for nodes in neighboursNodes:
@@ -126,8 +126,8 @@ def performSearch(model, start, goal):
         continue
 
       if nodes not in [cities.city for cities in closed]:
-        if neighboursNodes[nodes] not in openset and nodes != model.start:
-          openset.add(neighboursNodes[nodes])
+        if neighboursNodes[nodes] not in opened and nodes != model.start:
+          opened.add(neighboursNodes[nodes])
     expanded +=1
 
   return ([],expanded)  
