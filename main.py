@@ -2,11 +2,10 @@ import sys
 import math
 
 class node(object):
-  def __init__(self, city,g = 0, tc = 0,f = 0,d =0,parent = None):
+  def __init__(self, city,g = 0, tc = 0,f = 0,parent = None):
     self.city = city
     self.g = g
     self.f = f
-    self.d = d
     self.tc = tc
     self.parent = parent
 
@@ -72,13 +71,14 @@ def getCost(model, node, parentCost):
     return parentCost.g + getTentativeCost(model.inputData[parentCost.city], node)
   return cost
 
-def getFValue(model, node, parentCost = 0):
+def getFValue(model, node, parentCost = None):
   heuristic = 0
+  cost = 0
   if node in model.heuristicData:
     heuristic = model.heuristicData[node]
 
-  if model.start == node and ():
-    return (0, heuristic)
+  if model.start == node:
+    return (cost, heuristic)
   else:
     cost = getCost(model, node, parentCost)
     return  (cost, cost + heuristic)
@@ -90,17 +90,16 @@ def generateNodes(model, neighbours, parent):
   Nodes = {}
   for nbour in neighbours:
     cost, fvalue = getFValue(model, nbour[0], parent)
-    Nodes[nbour[0]] = node(nbour[0],cost,nbour[1], fvalue,0,parent)  
+    Nodes[nbour[0]] = node(nbour[0],cost,nbour[1], fvalue,parent)  
   return  Nodes
 
 def performSearch(model, start, goal):
-  fringe = {}
   opened = set()
   closed = set()
   fvalue = getFValue(model, start)
-  expanded = 0
-  fringe[start] = node(start,0,0, fvalue[1], 0,parent = None)
-  opened.add(fringe[start])
+  expanded = 1
+  startNode = node(start,0,0, fvalue[1], parent = None)
+  opened.add(startNode)
   current = start
 
   while opened:
