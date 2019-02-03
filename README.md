@@ -32,6 +32,7 @@ should have the following output:
 ```
 nodes expanded: 8
 distance: 297 km
+route:
 bremen to hannover, 132 km
 hannover to kassel, 165 km 
 ```
@@ -57,6 +58,7 @@ Here the last argument contains a text file what has the heuristic values for ev
 ```
 nodes expanded: 3
 distance: 297 km
+route:
 bremen to hannover, 132 km
 hannover to kassel, 165 km 
 ```
