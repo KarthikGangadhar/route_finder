@@ -1,6 +1,9 @@
-# route_finder
-This is Implemention of **[A * search](https://en.wikipedia.org/wiki/A*_search_algorithm)** algorithm that can find a route between any two cities. 
 
+Name: Karthik Gangadhara
+UTA_ID: 1001677851 (kxg7851)
+
+# route_finder
+This is Implemention of **[A * search](https://en.wikipedia.org/wiki/A*_search_algorithm)** algorithm that can find a route between any two cities using python. 
 
 ### Usage ###
 
