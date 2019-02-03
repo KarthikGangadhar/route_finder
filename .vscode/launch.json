@@ -1,0 +1,16 @@
+{
+  "configurations": [
+      {
+          "name": "Python",
+          "type": "python",
+          "request": "launch",
+          "program": "${workspaceFolder}/main.py",
+          "args": [
+              "input1.txt", 
+              "london",
+              "kassel",
+              "h_kassel.txt"
+          ]
+      }
+  ]
+}
