@@ -105,13 +105,10 @@ def performSearch(model, start, goal):
 
   while openset:
     current = min(openset, key=lambda o:o.f)
-    print('Expanding Node %d'%(expanded))
-    print('Generating successors to %s'%(current.city))
+    # print('Expanding Node %d'%(expanded))
+    # print('Generating successors to %s'%(current.city))
     neighbours = getNeighbor(model, current)
     neighboursNodes = generateNodes(model, neighbours, current)
-    for nbour in neighboursNodes:
-      if nbour not in fringe:
-        fringe[nbour] = neighboursNodes[nbour]
 
     if current.city == goal:
       path = []
@@ -128,12 +125,12 @@ def performSearch(model, start, goal):
       if neighboursNodes[nodes] in closed:
         continue
 
-      if node not in openset:
+      if nodes not in [cities.city for cities in closed]:
         if neighboursNodes[nodes] not in openset and nodes != model.start:
           openset.add(neighboursNodes[nodes])
     expanded +=1
 
-    
+  return ([],expanded)  
 
 #---------#---------#---------#---------#---------#--------#
 def _main() :
@@ -154,9 +151,14 @@ def _main() :
   distance = sum(map(lambda x: x.tc, path))
   print("nodes expanded: %d"%(expanded))
   print("")
-  print("distance: %d km"%(distance))
-  for i in range(len(path) -1):
-    print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
+  if distance:
+    print("distance: %d km"%(distance))
+    for i in range(len(path) -1):
+      print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
+  else:
+    print("distance: infinity")
+    print("route: none")
+
 
 if __name__ == '__main__' :
   _main()
