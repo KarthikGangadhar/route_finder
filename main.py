@@ -152,6 +152,7 @@ def _main() :
   print("")
   if distance:
     print("distance: %d km"%(distance))
+    print("route:")
     for i in range(len(path) -1):
       print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
   else:
