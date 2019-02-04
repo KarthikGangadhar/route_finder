@@ -156,11 +156,15 @@ def _main() :
   print(" --> ".join(paths))
   distance = sum(map(lambda x: x.tc, path))
   print("nodes expanded: %d"%(expanded))
-  if distance:
+  if distance and len(path) > 1:
     print("distance: %d km"%(distance))
     print("route:")
     for i in range(len(path) -1):
       print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
+  elif len(path) == 1:
+    print("distance: %d km"%(distance))
+    print("route:")
+    print("%s to %s, %d km"%(path[0].city, path[0].city, path[0].tc))
   else:
     print("distance: infinity")
     print("route: none")
