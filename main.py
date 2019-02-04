@@ -141,34 +141,37 @@ def performSearch(model, start, goal):
 #---------#---------#---------#---------#---------#--------#
 def _main() :
   # Get the file name and the other arguments.
-  fName = sys.argv[1]
-  origin_city = sys.argv[2].lower()
-  destination_city = sys.argv[3].lower()
-  if len(sys.argv) > 4:
-    hName = sys.argv[4]
-  else:
-    hName = None
+  argLength = len(sys.argv)
+  if argLength >= 4:
+    fName = sys.argv[1]
+    origin_city = sys.argv[2].lower()
+    destination_city = sys.argv[3].lower()
+    if argLength > 4:
+      hName = sys.argv[4]
+    else:
+      hName = None
 
-  model = FindRoute( fName, origin_city, destination_city, hName )
-  path,expanded = performSearch(model,origin_city, destination_city)
+    model = FindRoute( fName, origin_city, destination_city, hName )
+    path,expanded = performSearch(model,origin_city, destination_city)
   
-  paths = [p.city for p in path]
-  print(" --> ".join(paths))
-  distance = sum(map(lambda x: x.tc, path))
-  print("nodes expanded: %d"%(expanded))
-  if distance and len(path) > 1:
-    print("distance: %d km"%(distance))
-    print("route:")
-    for i in range(len(path) -1):
-      print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
-  elif len(path) == 1:
-    print("distance: %d km"%(distance))
-    print("route:")
-    print("%s to %s, %d km"%(path[0].city, path[0].city, path[0].tc))
+    paths = [p.city for p in path]
+    print(" --> ".join(paths))
+    distance = sum(map(lambda x: x.tc, path))
+    print("nodes expanded: %d"%(expanded))
+    if distance and len(path) > 1:
+      print("distance: %d km"%(distance))
+      print("route:")
+      for i in range(len(path) -1):
+        print("%s to %s, %d km"%(path[i].city, path[i+1].city, path[i+1].tc))
+    elif len(path) == 1:
+      print("distance: %d km"%(distance))
+      print("route:")
+      print("%s to %s, %d km"%(path[0].city, path[0].city, path[0].tc))
+    else:
+      print("distance: infinity")
+      print("route: none")
   else:
-    print("distance: infinity")
-    print("route: none")
-
+    print("Please enter all the required parameters")
 
 if __name__ == '__main__' :
   _main()
