@@ -11,7 +11,6 @@ class node(object):
 
 class FindRoute(object) :
   def __init__( self, inputFile = None, originCity = None, destinationCity = None, heuristicFile = None) :
-    self.informedSearch = False
     self.inputData = {}
     self.heuristicData = {}
     self.start = originCity 
@@ -20,7 +19,6 @@ class FindRoute(object) :
     if inputFile is not None :
       self.parseInputData( inputFile )
     if heuristicFile is not None :
-      self.informedSearch = True
       self.parseHeuristicData( heuristicFile )
 
   def parseInputData( self, inputFile ) :
@@ -74,10 +72,8 @@ def getTentativeCost(cities, node):
 
 def getCost(model, node, parentCost):
   cost = 0
-  if model.start == node:
-    return 0
-  else:
-    return parentCost.g + getTentativeCost(model.inputData[parentCost.city], node)
+  if model.start != node:
+    cost = parentCost.g + getTentativeCost(model.inputData[parentCost.city], node)
   return cost
 
 def getFValue(model, node, parentCost = None):
@@ -86,11 +82,10 @@ def getFValue(model, node, parentCost = None):
   if node in model.heuristicData:
     heuristic = model.heuristicData[node]
 
-  if model.start == node:
-    return (cost, heuristic)
-  else:
+  if model.start != node:
     cost = getCost(model, node, parentCost)
-    return  (cost, cost + heuristic)
+   
+  return  (cost, cost + heuristic)
   
 def getNeighbor(model, node):
   return model.inputData[node.city]
