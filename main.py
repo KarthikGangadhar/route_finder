@@ -57,6 +57,15 @@ class FindRoute(object) :
     finally:
       fp.close()
 
+def getLeastFvalueNode(nodes):
+  leastFNode = None
+  for node in nodes:
+    if leastFNode is None:
+      leastFNode = node 
+    elif leastFNode.f > node.f:
+      leastFNode = node
+  return leastFNode
+
 def getTentativeCost(cities, node):
   for city in cities:
     if city[0] == node:
@@ -103,9 +112,7 @@ def performSearch(model, start, goal):
   current = start
 
   while opened:
-    current = min(opened, key=lambda o:o.f)
-    # print('Expanding Node %d'%(expanded))
-    # print('Generating successors to %s'%(current.city))
+    current = getLeastFvalueNode(opened)
     neighbours = getNeighbor(model, current)
     neighboursNodes = generateNodes(model, neighbours, current)
 
@@ -149,7 +156,6 @@ def _main() :
   print(" --> ".join(paths))
   distance = sum(map(lambda x: x.tc, path))
   print("nodes expanded: %d"%(expanded))
-  print("")
   if distance:
     print("distance: %d km"%(distance))
     print("route:")
