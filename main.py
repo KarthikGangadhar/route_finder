@@ -27,7 +27,7 @@ class FindRoute(object) :
       lines = fp.read().replace('\r', '' ).split( '\n' )
 
       for line in lines:
-        if line != 'END OF INPUT':
+        if line and line != 'END OF INPUT':
           line_arr = line.strip().split(' ')
           if line_arr[0].lower() in self.inputData:
             self.inputData[line_arr[0].lower()].append((line_arr[1].lower(), int(line_arr[2])))
@@ -49,7 +49,7 @@ class FindRoute(object) :
       lines = fp.read().replace('\r', '' ).split( '\n' )
 
       for line in lines:
-        if line != 'END OF INPUT':
+        if line and line != 'END OF INPUT':
           line_arr = line.strip().split(' ')
           self.heuristicData[line_arr[0].lower()] = int(line_arr[1])
     finally:
