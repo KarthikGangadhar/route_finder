@@ -3,7 +3,6 @@ This is Implemention of **[A * search](https://en.wikipedia.org/wiki/A*_search_a
 
 ### Graph ###
 
-![graph-view](./graph.PNG)
 <p align="center">
   <img  src="./graph.PNG">
 </p>  
