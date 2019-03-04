@@ -3,7 +3,7 @@ This is Implemention of **[A * search](https://en.wikipedia.org/wiki/A*_search_a
 
 ### Graph ###
 
-<p align="center">
+<p align="left">
   <img  src="./graph.PNG">
 </p>  
 
